@@ -10,17 +10,18 @@ def main():
     print("The number you input is:", my_list)
     item = eval(input("Enter the number you want to search:"))
     index = binary_search(my_list, item)
-    print("The number is at:%d", index)
+    print("The number is at:", index+1)
 
 
 def binary_search(array, item):
     low = 0
     high = len(array) - 1
-    middle = round((low+high)/2)
     while low<=high:
-        if item == array[middle]:
+        middle = round((low+high)/2.0)
+        guess = array[middle]
+        if guess == item:
             return middle
-        if item > array[middle]:
+        if guess < item:
             low = middle + 1
         else:
             high = middle - 1
