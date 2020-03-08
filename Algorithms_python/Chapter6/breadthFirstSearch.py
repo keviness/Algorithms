@@ -21,3 +21,6 @@ def search(name):
 
 def person_is_seller(name):
     return name[-1] == "m"  #return true or false 
+
+if __name__ == "__search__":
+    search()

@@ -10,7 +10,7 @@ def main():
     graph["a"]["fin"] = 1
     graph["b"] = {}
     graph["b"]["a"] = 3
-    graph["b"][fin] = 5
+    graph["b"]["fin"] = 5
     graph["fin"] = {}
     infinity = float("inf") #infinity
     costs = {}
@@ -21,12 +21,14 @@ def main():
     parents["a"] = "start"
     parents["b"] = "start"
     print("DijkstraAlgorithm".center(28, "*"))
-
+    result = Dijkstra(costs, graph, parents)
+    for k, v in parents.items():
+        print("son:{0:<4} parent:{1:>4}".format(k, v))
 
 
 def Dijkstra(costs, graph, parents):
     processed = []
-    node = find_lowest_cost_node(costs)
+    node = find_lowest_cost_node(costs, processed)
     while node is not None:
         cost = costs[node]
         neighbors = graph[node]
@@ -37,12 +39,16 @@ def Dijkstra(costs, graph, parents):
                 parents[n] = node
         processed.append(node)
         node = find_lowest_cost_node(costs, processed)
+    return parents
 def find_lowest_cost_node(costs, processed):
     lowest_cost = float("inf")
     lowest_cost_node = None
     for node in costs:
         cost = costs[node]
-        if cost<lowest_cost and not in processed:
+        if cost<lowest_cost and node not in processed:
             lowest_cost = cost
             lowest_cost_node = node
     return lowest_cost_node 
+
+if __name__ == "__main__":
+    main()
