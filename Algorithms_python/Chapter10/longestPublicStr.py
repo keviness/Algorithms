@@ -1,4 +1,5 @@
 '''Longest public string and longest public sequence'''
+
 def main():
     word1 = input("Enter you word1:")
     word2 = input("Enter yuo word2:")
@@ -24,6 +25,7 @@ def publicStr(word1, word2):
             else:
                 cell[i][j] = 0
     return cell
+    
 def publicSeq(word1, word2):
     cell = [[]]
     for i in range(len(word1)):
@@ -34,5 +36,6 @@ def publicSeq(word1, word2):
             else:
                 cell[i][j] = max(cell[i-1][j], cell[i][j-1])
     return cell
+
 if __name__ == "__main__":
     main()
