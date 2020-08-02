@@ -13,7 +13,7 @@ typedef struct node
 Plist CrateList(void);
 bool ListIsEmpty(Plist plst);
 bool AppendItem(Plist plst);
-bool TraverseList(Plist plst);
+bool TraverseList(Plist plst, void(*pfun)(Plist plst));
 bool InsertItem(Plist plst);
 int ListLength(Plist plst);
 int DeleteItem(Plist plst);
@@ -21,6 +21,7 @@ void SortList(Plist plst);
 void ShowList(Plist plst);
 void ClearList(Plist plst);
 
+static void PrintItem(Plist plst);
 static char GetChoice(void);
 
 int main(void)
@@ -33,7 +34,7 @@ int main(void)
         {
         case 'a': AppendItem(&lst);
             break;
-        case 't': TraverseList(&lst);
+        case 't': TraverseList(&lst, PrintItem);
             break;
         case 'i': InsertItem(&lst);
             break;
@@ -92,7 +93,7 @@ bool ListIsEmpty(Plist phead)
 bool AppendItem(Plist phead)
 {
     Plist pnew;
-    Plist p = phead->pnext;
+    Plist p = phead;
     while (p->pnext != NULL)
     {
         p = p->pnext;
@@ -119,4 +120,141 @@ int ListLength(Plist phead)
         count++;
     }
     return count;
+}
+
+bool TraverseList(Plist phead, void(*pfun)(Plist plst))
+{
+    Plist p = phead->pnext;
+    if (ListIsEmpty(phead))
+    {
+        puts("The List is empty！");
+        return false;
+    }
+    while (p != NULL)
+    {
+        (*pfun)(p);
+        p = p->pnext;
+    }
+    return true;
+}
+
+bool InsertItem(Plist phead)
+{
+    int pos, data;
+    int i = 0;
+    Plist p = phead;
+    Plist pnew;
+    puts("Enter the index you want to insert:");
+    scanf("%d", &pos);
+    EATLINE;
+    
+    while (i<pos-1 && p!=NULL)
+    {
+        p = p->pnext;
+        i++;
+    }
+    if (i>pos-1 && p==NULL)
+    {
+        puts("The pos input error!");
+        return false;
+    }
+    pnew = (Plist)malloc(sizeof(List));
+    if (pnew == NULL)
+    {
+        puts("Can\'t locate the memory!");
+        return false;
+    }
+    puts("Enter the data you want to save:");
+    scanf("%d", &data);
+    EATLINE;
+    pnew->data = data;
+    
+    pnew->pnext = p->pnext;
+    p->pnext = pnew;
+
+    return true;
+}
+
+int DeleteItem(Plist phead)
+{
+    int pos, data, i, value;
+    Plist pnew, p, q;
+    p = phead;
+    puts("Enter the pos you want to delete:");
+    scanf("%d", &pos);
+    EATLINE;
+    i = 0;
+    while (i<pos-1 && p->pnext!=NULL)
+    {
+        p = p->pnext;
+        i++;
+    }
+    if (i>pos-1 || p->pnext==NULL)
+    {
+        puts("The pos input error!");
+        exit(EXIT_FAILURE);
+    }
+    q = p->pnext;
+    value = q->data;
+    p->pnext = q->pnext;
+    free(q);
+    q = NULL;
+
+    return value;
+}
+
+void ClearList(Plist phead)
+{
+    Plist p = phead;
+    while (p != NULL)
+    {
+        phead = p->pnext;
+        free(p);
+        p = phead;
+    }
+}
+
+void ShowList(Plist phead)
+{
+    Plist p = phead->pnext;
+    if (p = NULL)
+    {
+        puts("The list is empty!");
+    }
+    while (p != NULL)
+    {
+        printf("%d ", p->data);
+        p = p->pnext;
+    }
+}
+
+static char GetChoice(void)
+{
+    char ch;
+    puts("Enter the choice:");
+    puts("a)Append item       t)Traverse list");
+    puts("i)Insert item       d)Delete item");
+    puts("s)Sort item         e)Shoe list");
+    puts("l)List length       q)Quit");
+    while ((ch = getchar()) != '\n')
+    {
+        EATLINE;
+        if (strchr("atidselq", ch) == NULL)
+        {
+            puts("The error choice you input!try again:");
+        }
+        else
+        {
+            break;
+        }
+    }
+    if (ch == '\n')
+        ch = 'q';
+
+    return ch;
+}
+
+static void PrintItem(Plist plst)
+{
+    printf("%d ", plst->data);
 }
