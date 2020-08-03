@@ -28,31 +28,31 @@ int main(void)
 {
     char choice;
     Plist lst = CrateList();
-    while ((choice = getChoice()) != 'q')
+    while ((choice = GetChoice()) != 'q')
     {
         switch (choice)
         {
-        case 'a': AppendItem(&lst);
+        case 'a': AppendItem(lst);
             break;
-        case 't': TraverseList(&lst, PrintItem);
+        case 't': TraverseList(lst, PrintItem);
             break;
-        case 'i': InsertItem(&lst);
+        case 'i': InsertItem(lst);
             break;
-        case 'd': DeleteItem(&lst);
+        case 'd': printf("Delete the  data: %d \n", DeleteItem(lst));
             break;
-        case 's': SortList(&lst);
+        case 's': SortList(lst);
             break;
-        case 'e': ShowList(&lst);
+        case 'e': ShowList(lst);
             break;
-        case 'l': printf("The list length:%d \n", ListLength(&lst));
+        case 'l': printf("The list length:%d \n", ListLength(lst));
             break;
         default: puts("The error choice!");
             break;
         }
     }
     puts("The list content:");
-    ShowList(&lst);
-    ClearList(&lst);
+    ShowList(lst);
+    ClearList(lst);
 
     return 0;
 }
@@ -75,9 +75,10 @@ Plist CrateList(void)
             puts("Locate mmemory error!");
             exit(EXIT_FAILURE);
         }
-        printf("Enter the %d data:", i);
+        printf("Enter the %d data:", i+1);
         scanf("%d", &item);
         EATLINE;
+        pnew->data = item;
         pnew->pnext = NULL;
         pprevious->pnext = pnew;
         pprevious = pnew;
@@ -94,6 +95,7 @@ bool AppendItem(Plist phead)
 {
     Plist pnew;
     Plist p = phead;
+    int item;
     while (p->pnext != NULL)
     {
         p = p->pnext;
@@ -104,9 +106,14 @@ bool AppendItem(Plist phead)
         puts("Locate memory error!");
         return false;
     }
+    puts("Enter the data you want to append:");
+    scanf("%d", &item);
+    EATLINE;
+    pnew->data = item;
     pnew->pnext = NULL;
     p->pnext = pnew;
 
+    printf("Enter the %d successfully!\n", item);
     return true;
 }
 
@@ -145,8 +152,11 @@ bool InsertItem(Plist phead)
     Plist p = phead;
     Plist pnew;
     puts("Enter the index you want to insert:");
-    scanf("%d", &pos);
-    EATLINE;
+    while ((pos=scanf("%d", &pos)) < 1)
+    {
+        EATLINE;
+        puts("The error pos value, try again:");
+    }
     
     while (i<pos-1 && p!=NULL)
     {
@@ -172,6 +182,7 @@ bool InsertItem(Plist phead)
     pnew->pnext = p->pnext;
     p->pnext = pnew;
 
+    printf("successfully insert %d \n", data);
     return true;
 }
 
@@ -181,8 +192,13 @@ int DeleteItem(Plist phead)
     Plist pnew, p, q;
     p = phead;
     puts("Enter the pos you want to delete:");
-    scanf("%d", &pos);
-    EATLINE;
+    
+    while ((pos=scanf("%d", &pos)) < 1)
+    {
+        EATLINE;
+        puts("The error pos value, try again:");
+    }
+
     i = 0;
     while (i<pos-1 && p->pnext!=NULL)
     {
@@ -203,6 +219,33 @@ int DeleteItem(Plist phead)
     return value;
 }
 
+void SortList(Plist phead)
+{
+    Plist p, q;
+    int i, j, count, temp;
+    count = ListLength(phead);
+    if (ListIsEmpty(phead))
+    {
+        puts("The list is empty!");
+    }
+    else
+    {
+        for (i=0,p=phead->pnext; i<count-1; i++,p=p->pnext)
+        {
+            for (j=i+1,q=p->pnext; j<count; j++,q=q->pnext)
+            {
+                if ((p->data) > (q->data))
+                {
+                    temp = p->data;
+                    p->data = q->data;
+                    q->data = temp;
+                }
+            }
+        }
+    }
+    
+}
+
 void ClearList(Plist phead)
 {
     Plist p = phead;
@@ -217,13 +260,13 @@ void ClearList(Plist phead)
 void ShowList(Plist phead)
 {
     Plist p = phead->pnext;
-    if (p = NULL)
+    if (ListIsEmpty(phead))
     {
-        puts("The list is empty!");
+        puts("The List is empty！");
     }
     while (p != NULL)
     {
-        printf("%d ", p->data);
+        printf("%d ",p->data);
         p = p->pnext;
     }
 }
@@ -231,10 +274,10 @@ void ShowList(Plist phead)
 static char GetChoice(void)
 {
     char ch;
-    puts("Enter the choice:");
+    puts("\nEnter the choice:");
     puts("a)Append item       t)Traverse list");
     puts("i)Insert item       d)Delete item");
-    puts("s)Sort item         e)Shoe list");
+    puts("s)Sort item         e)Show list");
     puts("l)List length       q)Quit");
     while ((ch = getchar()) != '\n')
     {
