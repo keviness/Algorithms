@@ -152,7 +152,7 @@ bool InsertItem(Plist phead)
     Plist p = phead;
     Plist pnew;
     puts("Enter the index you want to insert:");
-    while ((pos=scanf("%d", &pos)) < 1)
+    while ((scanf("%d", &pos) != 1) && pos<1)
     {
         EATLINE;
         puts("The error pos value, try again:");
@@ -193,7 +193,7 @@ int DeleteItem(Plist phead)
     p = phead;
     puts("Enter the pos you want to delete:");
     
-    while ((pos=scanf("%d", &pos)) < 1)
+    while ((scanf("%d", &pos) != 1) && pos<1)
     {
         EATLINE;
         puts("The error pos value, try again:");
