@@ -157,7 +157,7 @@ bool InsertItem(Plist phead)
         EATLINE;
         puts("The error pos value, try again:");
     }
-    
+    EATLINE;
     while (i<pos-1 && p!=NULL)
     {
         p = p->pnext;
@@ -198,7 +198,7 @@ int DeleteItem(Plist phead)
         EATLINE;
         puts("The error pos value, try again:");
     }
-
+    EATLINE;
     i = 0;
     while (i<pos-1 && p->pnext!=NULL)
     {
@@ -243,7 +243,6 @@ void SortList(Plist phead)
             }
         }
     }
-    
 }
 
 void ClearList(Plist phead)
