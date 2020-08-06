@@ -157,12 +157,11 @@ void TraverseStack(Pstack stack, void(*pfun)(int *data))
         return;
     }
     Pnode previousTop = stack->top;
-    while ((stack->top) != (stack->buttom))
+    while (previousTop != (stack->buttom))
     {
-        (*pfun)(&(stack->top->data));
-        stack->top = stack->top->pnext;
+        (*pfun)(&(previousTop->data));
+        previousTop = previousTop->pnext;
     }
-    stack->top = previousTop;
 }
 
 void GetStackLength(Pstack stack)
@@ -174,13 +173,12 @@ void GetStackLength(Pstack stack)
     }
     int count = 0;
     Pnode previousTop = stack->top;
-    while ((stack->top) != (stack->buttom))
+    while (previousTop != (stack->buttom))
     {
         count++;
-        stack->top = stack->top->pnext;
+        previousTop = previousTop->pnext;
     }
     printf("The stack length:%d \n", count);
-    stack->top = previousTop;
 }
 
 void ShowStack(Pstack stack)
@@ -191,14 +189,13 @@ void ShowStack(Pstack stack)
         return;
     }
     Pnode previousPoint =  stack->top; //保存初次栈头部指针的位置
-    while ((stack->top) != (stack->buttom))
+    while (previousPoint != (stack->buttom))
     {
-        printf("%d ", stack->top->data);
-        stack->top = stack->top->pnext;
+        printf("%d ", previousPoint->data);
+        previousPoint = previousPoint->pnext;
     }
     putchar('\n');
     /** 使指针回到原来的位置 **/
-    stack->top = previousPoint;
 }
 
 static void TwiceItem(int *data)
