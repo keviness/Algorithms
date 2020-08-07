@@ -22,3 +22,4 @@ my exercise codes during learn algorithms
 |Chapter1| 数组实现    | [array](./Algorithms_C/郝斌数据结构/array.c)|
 |Chapter2| 链表实现    | [list](./Algorithms_C/郝斌数据结构/list.c)|
 |Chapter3| 栈的实现    | [stack](./Algorithms_C/郝斌数据结构/stack.c))|
+|Chapter4| 队列的实现  | [queue](./Algorithms_C/郝斌数据结构/queue.c)|
