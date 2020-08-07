@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #define EATLINE while(getchar() != '\n')continue
 #define SIZE 10
-typedef struct queue
+typedef struct Queue
 {
     int *pbase;
     int front;
@@ -17,10 +17,10 @@ bool QueueIsEmpty(PQUEUE queue);
 bool QueueIsFull(PQUEUE queue);
 bool EnterQueue(PQUEUE queue);
 bool OutQueue(PQUEUE queue);
-void TraverseQueue(PQUEUE queue);
+void TraverseQueue(PQUEUE queue, void(*pfun)(int *data));
 void QueueLength(PQUEUE queue);
 void ShowQueue(PQUEUE queue);
-void ClarQueue(PQUEUE queue);
+void ClearQueue(PQUEUE queue);
 static char GetChoice(void);
 static void TwiceQueue(int *pint);
 
@@ -41,7 +41,7 @@ int main(void)
             break;
         case 'd': QueueLength(&queue);
             break;
-        case 'e': TraverseQueue(&queue);
+        case 'e': TraverseQueue(&queue, TwiceQueue);
             break;
         default: puts("The error choice input!");
             break;
@@ -49,7 +49,7 @@ int main(void)
     }
     puts("The queue content:");
     ShowQueue(&queue);
-    ClarQueue(&queue);
+    ClearQueue(&queue);
     
     puts("The done~");
     return 0;
@@ -57,7 +57,7 @@ int main(void)
 
 void InitQueue(PQUEUE queue)
 {
-    queue->pbase = (PQUEUE)malloc(sizeof(QUEUE)*SIZE);
+    queue->pbase = (int *)malloc(sizeof(int) * SIZE);
     if ((queue->pbase) == NULL)
     {
         puts("Error in locating the memory!");
@@ -69,17 +69,17 @@ void InitQueue(PQUEUE queue)
 
 bool QueueIsEmpty(PQUEUE queue)
 {
-    return (queue->front == queue->rear)? true:false;
+    return ((queue->front) == (queue->rear))? true:false;
 }
 
 bool QueueIsFull(PQUEUE queue)
 {
-    return ((queue->rear+1)%SIZE == queue->front)? true:false;
+    return (((queue->rear)+1 % SIZE) == (queue->front)) ? true:false;
 }
 
 bool EnterQueue(PQUEUE queue)
 {
-    if (QueueIsFull)
+    if (QueueIsFull(queue))
     {
         puts("The queue is full!");
         return false;
@@ -104,7 +104,7 @@ bool EnterQueue(PQUEUE queue)
 
 bool OutQueue(PQUEUE queue)
 {
-    if (QueueIsEmpty)
+    if (QueueIsEmpty(queue))
     {
         puts("The queue is empty!");
         return false;
@@ -112,8 +112,68 @@ bool OutQueue(PQUEUE queue)
     int data;
     data = (queue->pbase)[queue->front];
     queue->front = (queue->front+1)%SIZE;
+    printf("The out queue data:%d \n", data);
 
     return true;
+}
+
+void TraverseQueue(PQUEUE queue, void(*pfunc)(int *data))
+{
+    if (QueueIsEmpty(queue))
+    {
+        puts("The queue is empty!");
+        return;
+    }
+    int i = queue->front;
+    while (i != queue->rear)
+    {
+        (*pfunc)(&(queue->pbase[i]));
+        i = (i+1)%SIZE;
+    }
+}
+
+void ShowQueue(PQUEUE queue)
+{
+    if (QueueIsEmpty(queue))
+    {
+        puts("The queue is empty!");
+        return;
+    }
+    int i = queue->front;
+    while (i != queue->rear)
+    {
+        printf("%d ", (queue->pbase)[i]);
+        i = (i+1)%SIZE;
+    }
+    putchar('\n');
+}
+
+void QueueLength(PQUEUE queue)
+{
+    int i = queue->front;
+    int count = 0;
+    while (i != queue->rear)
+    {
+        count++;
+        i = (i+1)%SIZE;
+    }
+    printf("The queue length:%d \n", count);
+}
+
+void ClearQueue(PQUEUE queue)
+{
+    if (QueueIsEmpty(queue))
+    {
+        puts("The queue is empty!");
+        return;
+    }
+    free(queue->pbase);
+    puts("Clear queue successfully!");
+}
+
+static void TwiceQueue(int *data)
+{
+    *data = (*data) * 2;
 }
 
 static char GetChoice(void)
