@@ -3,7 +3,7 @@ my exercise codes during learn algorithms
 ****
 ## Algorithms by Python
 ### 算法图解
-#### Index
+
 | Chapters |   Descriptions   |  Codes   |
 |:--------:|:----------------:|---------:|
 | Chapter1 | binnary search  | [chapter1](./Algorithms_python/Chapter1)|
@@ -16,10 +16,10 @@ my exercise codes during learn algorithms
 ***
 ## Algorithms by C
 ### 郝斌数据结构
-#### Index
 |Chapters| Descriptions| Code |
 |:------:|:-----------:|:----:|
 |Chapter1| 数组实现    | [array](./Algorithms_C/郝斌数据结构/array.c)|
 |Chapter2| 链表实现    | [list](./Algorithms_C/郝斌数据结构/list.c)|
-|Chapter3| 栈的实现    | [stack](./Algorithms_C/郝斌数据结构/stack.c))|
+|Chapter3| 栈的实现    | [stack](./Algorithms_C/郝斌数据结构/stack.c)|
 |Chapter4| 队列的实现  | [queue](./Algorithms_C/郝斌数据结构/queue.c)|
+|Chapter5| 几个常用递归的实现 |[recurse](./Algorithms_C/郝斌数据结构/recurse.c)|
