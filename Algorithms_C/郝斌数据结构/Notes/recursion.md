@@ -53,6 +53,7 @@ long multiply_numbers(int num)
 }
 ~~~
 #### （三）汉诺塔
+![hannuo tower](./img/hannuoTower.jpg)
 ~~~c
 void hannuo_tower(int num, char A, char B, char C)
 {
