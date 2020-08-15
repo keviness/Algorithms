@@ -21,7 +21,7 @@ int main(void)
 void StraightInsertionSort(int *arr)
 {
     int i, j;
-    
+    /*
     for (i=2; i<SIZE; i++)
     {
         if (arr[i] < arr[i-1])
@@ -34,11 +34,24 @@ void StraightInsertionSort(int *arr)
             arr[j+1] = arr[0];
         }
     }
+    */
+   for (i=1; i<SIZE; i++) //首元素从第二个开始
+    {
+        if (arr[i] < arr[i-1])
+        {
+            int value = arr[i];  //没有设置数组首元素为哨兵
+            for (j=i-1; j>=0 && arr[j]>value; j--)
+            {
+                arr[j+1] = arr[j];
+            }
+            arr[j+1] = value;
+        }
+    }
 }
 
 void ShowArray(int *arr)
 {
-    for (int i=1; i<SIZE; i++)
+    for (int i=0; i<SIZE; i++)
     {
         printf("%d ", arr[i]);
     }
