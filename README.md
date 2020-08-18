@@ -18,8 +18,8 @@ my exercise codes during learn algorithms
 ### 郝斌数据结构
 |Chapters| Descriptions| Codes | Notes |
 |:------:|:-----------:|:-----:|:-----:|
-|Chapter1| 数组实现    | [array](./Algorithms_C/郝斌数据结构/array.c)| [array](./Algorithms_C/郝斌数据结构/Notes/array.md)  |
-|Chapter2| 链表实现    | [list](./Algorithms_C/郝斌数据结构/list.c)| [list](./Algorithms_C/郝斌数据结构/Notes/list.md) |
-|Chapter3| 栈的实现    | [stack](./Algorithms_C/郝斌数据结构/stack.c)| [stack](./Algorithms_C/郝斌数据结构/Notes/stack.md)|
-|Chapter4| 队列的实现  | [queue](./Algorithms_C/郝斌数据结构/queue.c)| [queue](./Algorithms_C/郝斌数据结构/Notes/queue.md) |
-|Chapter5| 几个常用递归的实现 |[recurse](./Algorithms_C/郝斌数据结构/recurse.c)| [recursion](./Algorithms_C/郝斌数据结构/Notes/recursion.md)|
+|Chapter1| 数组实现    | [array](./Algorithms_C/郝斌数据结构/DataStruct/array.c)| [array](./Algorithms_C/郝斌数据结构/Notes/array.md)  |
+|Chapter2| 链表实现    | [list](./Algorithms_C/郝斌数据结构/DataStruct/list.c)| [list](./Algorithms_C/郝斌数据结构/Notes/list.md) |
+|Chapter3| 栈的实现(1):链式栈    | [stack](./Algorithms_C/郝斌数据结构/DataStruct/stack.c)| [stack](./Algorithms_C/郝斌数据结构/Notes/stack.md)|
+|Chapter4| 队列的实现(1):顺序栈  | [queue](./Algorithms_C/郝斌数据结构/DataStruct/queue.c)| [queue](./Algorithms_C/郝斌数据结构/Notes/queue.md) |
+|Chapter5| 几个常用递归的实现 |[recurse](./Algorithms_C/郝斌数据结构/DataStruct/recurse.c)| [recursion](./Algorithms_C/郝斌数据结构/Notes/recursion.md)|
