@@ -23,17 +23,20 @@ void Merge(int *arr, int left, int middle, int right)
 {
     int left_size = middle-left;
     int right_size = right-middle+1;
+    //printf("left size:%d\n", left_size);
+    //printf("right size:%d\n", right_size);
     int left_arr[left_size];
     int right_arr[right_size];
     int i, j, k;
-    for (i=left; i<left_size; i++)
+    for (i=left; i<middle; i++)
     {
         left_arr[i-left] = arr[i];
     }
-    for (j=middle; j<=right_size; j++)
+    for (j=middle; j<=right; j++)
     {
         right_arr[j-middle] = arr[j];
     }
+    
     //对两个子数组元素进行合并
     i=0; j=0; k=left;
     while (i<left_size && j<right_size)
@@ -51,6 +54,7 @@ void Merge(int *arr, int left, int middle, int right)
             k++;
         }
     }
+    //将剩余数据填入源数组中
     while (i < left_size)
     {
         arr[k] = left_arr[i];
@@ -67,7 +71,7 @@ void Merge(int *arr, int left, int middle, int right)
 
 void MergeSort(int *arr, int left, int right)
 {
-    if (left == right)
+    if (left >= right)
         return;
     else
     {
