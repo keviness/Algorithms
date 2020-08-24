@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include <string.h>
 #define SIZE 10
-int BinarySort(int *arr, int value, int length);
+int BinarySearch(int *arr, int value, int length);
+//int BinarySort(int *arr, int value, int low, int high);
 
 int main(void)
 {
@@ -18,30 +19,48 @@ int main(void)
         }
         puts(" is not a number! try again:");
     }
-    while(getchar() != '\n') continue;
-    printf("The value in %d index \n", BinarySort(arr, value, SIZE));
+    while(getchar() != '\n') 
+        continue;
+    printf("The value: %d is in %d index \n", value, BinarySearch(arr, value, SIZE));
 
     return 0;
 }
 
-int BinarySort(int *arr, int value, int length)
+int BinarySearch(int *a, int value, int n)
 {
-    int middle, low, high;
-    low = 0; 
-    high = length-1;
-    while (low <= high)
+    int low, high, mid;
+    low = 0;
+    high = n-1;
+    int result;
+    while(low<=high)
     {
-        middle = (low+high)/2;
-        if (arr[middle] < value)
-        {
-            low = middle+1;
-        }
-        if (arr[middle] > value)
-        {
-            high = middle-1;
-        }
-        if (arr[middle] == value)
-            return middle;
+        mid = (low+high)/2;
+        if(a[mid]==value)
+            result = mid;
+        if(a[mid]>value)
+            high = mid-1;
+        if(a[mid]<value)
+            low = mid+1;
     }
-    return -1;
+    if (low > high)
+        result = -1;
+    return result;
 }
+
+/*** 非递归版本 ***/
+
+/*** 递归实现 ***/
+/*
+int BinarySort(int *arr, int value, int low, int high)
+{
+    if (low > high)
+        return -1;
+    int middle = (low+high)/2;
+    if (arr[middle] == value)
+        return middle;
+    if (arr[middle] > value)
+        return BinarySort(arr, value, low, high-1);
+    if (arr[middle] < value)
+        return BinarySort(arr, value, middle+1, high);
+}
+*/
