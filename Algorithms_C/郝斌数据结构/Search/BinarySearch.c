@@ -7,7 +7,7 @@ int BinarySearch(int *arr, int value, int length);
 
 int main(void)
 {
-    int arr[SIZE] = {-23, -3, 1, 2, 10, 13, 25, 22, 45}; //数组必须有序
+    int arr[SIZE] = {-23, -3, 1, 2, 10, 13, 25, 28, 45}; //数组必须有序
     int value;
     char ch;
     puts("Enter the value you want to search:");
