@@ -15,6 +15,7 @@ my exercise codes during learn algorithms
 
 ***
 ## Algorithms by C
+
 ### 郝斌数据结构
 |Chapters| Descriptions| Codes | Notes |
 |:------:|:-----------:|:-----:|:-----:|
@@ -23,6 +24,7 @@ my exercise codes during learn algorithms
 |Chapter3| 栈的实现(1):链式栈    | [stack](./Algorithms_C/郝斌数据结构/DataStruct/stack.c)| [stack](./Algorithms_C/郝斌数据结构/Notes/stack.md)|
 |Chapter4| 队列的实现(1):顺序栈  | [queue](./Algorithms_C/郝斌数据结构/DataStruct/queue.c)| [queue](./Algorithms_C/郝斌数据结构/Notes/queue.md) |
 |Chapter5| 几个常用递归的实现 |[recurse](./Algorithms_C/郝斌数据结构/DataStruct/recurse.c)| [recursion](./Algorithms_C/郝斌数据结构/Notes/recursion.md)|
+
 ### 常见排序算法
 | Index | Description | Code |
 |:-----:|:-----------:|:----:|
@@ -34,3 +36,12 @@ my exercise codes during learn algorithms
 |  6    | 交换排序（一）：冒泡排序|[冒泡排序](./Algorithms_C/郝斌数据结构/Sorts/BubbleSort.c)|
 |  7    | 交换排序（二）：快速排序|[快速排序](./Algorithms_C/郝斌数据结构/Sorts/QuickSort.c)|
 |  8    | 归并排序|[归并排序](./Algorithms_C/郝斌数据结构/Sorts/MergeSort.c)|
+
+### 常见查找算法
+| Index | Description | Code |
+|:-----:|:-----------:|:----:|
+| 1     | 顺序查找    | [顺序查找](./Algorithms_C/郝斌数据结构/Search/SequenceSearch.c)|
+| 2     | 折半查找    | [折半查找](./Algorithms_C/郝斌数据结构/Search/BinarySearch.c)|
+| 3     | 插值查找    | [插值查找](./Algorithms_C/郝斌数据结构/Search/InsertSearch.c)|
+| 4     | 分块查找    | [分块查找](./Algorithms_C/郝斌数据结构/Search/BlockSearch.c)|
+| 5     | 斐波那契查找| [斐波那契查找](./Algorithms_C/郝斌数据结构/Search/FibonacciSearch.c)|
