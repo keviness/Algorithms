@@ -5,7 +5,7 @@ my exercise codes during learn algorithms
 ### 算法图解
 
 | Chapters |   Descriptions   |  Codes   |
-|:--------:|:----------------:|---------:|
+|:--------:|:----------------:|:---------:|
 | Chapter1 | binnary search  | [chapter1](./Algorithms_python/Chapter1)|
 | Chapter2 | selection sort  | [chapter2](./Algorithms_python/Chapter2)|
 | Chapter3 | recursion       | [chapter3](./Algorithms_python/Chapter3)|
@@ -17,19 +17,20 @@ my exercise codes during learn algorithms
 ## Algorithms by C
 
 ### 郝斌数据结构
-|Chapters| Descriptions| Codes | Notes |
+&emsp;在此感谢郝斌老师的分享，此目录下的代码实现参考了[郝斌老师的课堂视频](https://www.bilibili.com/video/BV11s41167h6?p=72)。
+|  Index | Descriptions| Codes | Notes |
 |:------:|:-----------:|:-----:|:-----:|
-|Chapter1| 数组实现    | [array](./Algorithms_C/郝斌数据结构/DataStruct/array.c)| [array](./Algorithms_C/郝斌数据结构/Notes/array.md)  |
-|Chapter2| 链表实现    | [list](./Algorithms_C/郝斌数据结构/DataStruct/list.c)| [list](./Algorithms_C/郝斌数据结构/Notes/list.md) |
-|Chapter3| 栈的实现(1):链式栈    | [stack](./Algorithms_C/郝斌数据结构/DataStruct/stack.c)| [stack](./Algorithms_C/郝斌数据结构/Notes/stack.md)|
-|Chapter4| 队列的实现(1):顺序栈  | [queue](./Algorithms_C/郝斌数据结构/DataStruct/queue.c)| [queue](./Algorithms_C/郝斌数据结构/Notes/queue.md) |
-|Chapter5| 几个常用递归的实现 |[recurse](./Algorithms_C/郝斌数据结构/DataStruct/recurse.c)| [recursion](./Algorithms_C/郝斌数据结构/Notes/recursion.md)|
+|    1   | 线性表（一）：数组实现    | [array](./Algorithms_C/郝斌数据结构/DataStruct/array.c)| [array](./Algorithms_C/郝斌数据结构/Notes/array.md)  |
+|   2    | 线性表（二）：链表实现    | [list](./Algorithms_C/郝斌数据结构/DataStruct/list.c)| [list](./Algorithms_C/郝斌数据结构/Notes/list.md) |
+|   3    | 栈的实现（一）；链式存储实现    | [stack](./Algorithms_C/郝斌数据结构/DataStruct/stack.c)| [stack](./Algorithms_C/郝斌数据结构/Notes/stack_link.md)|
+|   4    | 队列的实现（一）：顺序存储实现  | [queue](./Algorithms_C/郝斌数据结构/DataStruct/queue.c)| [queue](./Algorithms_C/郝斌数据结构/Notes/queue_sequence.md) |
+|   5    | 几个常用递归的实现 |[recurse](./Algorithms_C/郝斌数据结构/DataStruct/recurse.c)| [recursion](./Algorithms_C/郝斌数据结构/Notes/recursion.md)|
 
 ### 常见排序算法
 | Index | Description | Code |
 |:-----:|:-----------:|:----:|
 |  1    | 插入排序（一）：直接插入排序|[直接插入排序](./Algorithms_C/郝斌数据结构/Sorts/StraightInsertionSort.c)|
-| 2     | 插入排序（二）：折半排序|[折半排序](./Algorithms_C/郝斌数据结构/Sorts/BInsertSort.c)|
+|  2    | 插入排序（二）：折半排序|[折半排序](./Algorithms_C/郝斌数据结构/Sorts/BInsertSort.c)|
 |  3    | 插入排序（三）：希尔排序|[希尔排序](./Algorithms_C/郝斌数据结构/Sorts/ShellSort.c)|
 |  4    | 选择排序（一）：简单选择排序|[简单选择排序](./Algorithms_C/郝斌数据结构/Sorts/SimpleSelectSort.c)|
 |  5    | 选择排序（二）：堆排序|[堆排序](./Algorithms_C/郝斌数据结构/Sorts/HeapSort.c)|
