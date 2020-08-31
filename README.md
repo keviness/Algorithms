@@ -22,8 +22,10 @@ my exercise codes during learn algorithms
 |:------:|:-----------:|:-----:|:-----:|
 |    1   | 线性表（一）：数组实现    | [array](./Algorithms_C/郝斌数据结构/DataStruct/array.c)| [array](./Algorithms_C/郝斌数据结构/Notes/array.md)  |
 |   2    | 线性表（二）：链表实现    | [list](./Algorithms_C/郝斌数据结构/DataStruct/list.c)| [list](./Algorithms_C/郝斌数据结构/Notes/list.md) |
-|   3    | 栈的实现（一）；链式存储实现    | [stack](./Algorithms_C/郝斌数据结构/DataStruct/stack.c)| [stack](./Algorithms_C/郝斌数据结构/Notes/stack_link.md)|
-|   4    | 队列的实现（一）：顺序存储实现  | [queue](./Algorithms_C/郝斌数据结构/DataStruct/queue.c)| [queue](./Algorithms_C/郝斌数据结构/Notes/queue_sequence.md) |
+|   3    | 栈的实现（一）；链式存储实现    | [stack link](./Algorithms_C/郝斌数据结构/DataStruct/stack_link.c)| [stack link](./Algorithms_C/郝斌数据结构/Notes/stack_link.md)|
+|  4     | 栈的实现（二）：顺序存储实现 | [stack sequence](./Algorithms_C/郝斌数据结构/DataStruct/stack_sequence.c)|[stack sequence](./Algorithms_C/郝斌数据结构/Notes/stack_sequence.md)|
+|   5    | 队列的实现（一）：链式存储实现| [queue link](./Algorithms_C/郝斌数据结构/DataStruct/queue_link.c)|[queue link](./Algorithms_C/郝斌数据结构/Notes/queue_link.md)|
+|   4    | 队列的实现（一）：顺序存储实现  | [queue sequence](./Algorithms_C/郝斌数据结构/DataStruct/queue_sequence.c)| [queue sequence](./Algorithms_C/郝斌数据结构/Notes/queue_sequence.md) |
 |   5    | 几个常用递归的实现 |[recurse](./Algorithms_C/郝斌数据结构/DataStruct/recurse.c)| [recursion](./Algorithms_C/郝斌数据结构/Notes/recursion.md)|
 
 ### 常见排序算法
