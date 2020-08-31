@@ -103,11 +103,13 @@ bool DeQueue(Pqueue queue)
     Pnode temp = queue->front->pnext;
     data = temp->data;
     queue->front->pnext = temp->pnext;
-    if (temp = queue->rear)
+    
+    if (temp == queue->rear)
     {
         queue->rear = queue->front;
     }
     free(temp);
+    printf("Delete %d from the queue successfully!\n", data);
 
     return true;
 }
@@ -125,17 +127,19 @@ void ShowQueue(Pqueue queue)
         printf("%d ", start->data);
         start = start->pnext;
     }
+    putchar('\n');
 }
 
 int QueueLength(Pqueue queue)
 {
+    int count = 0;
     if (QueueIsEmpty(queue))
     {
         puts("The queue is empty!");
-        return;
+        count = 0;
     }
     Pnode start = queue->front->pnext;
-    int count = 0;
+    
     while (start != NULL)
     {
         count++;
@@ -172,7 +176,7 @@ static char GetChoice(void)
     while ((ch = getchar()) != '\n')
     {
         EATLINE;
-        if (strchr("abcq", ch) == NULL)
+        if (strchr("abcdq", ch) == NULL)
         {
             printf("%c is not in a,b,c,q. try again:");
         }
