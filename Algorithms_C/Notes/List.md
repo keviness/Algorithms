@@ -1,4 +1,4 @@
-## 线性表：数组的链式存储实现
+## 线性表：链表实现
 
 ### 一，概念及示意图
 * 线性表顺序存储示意图
@@ -41,10 +41,6 @@ void InitArray(PQUEUE queue)
 bool ListIsEmpty(Plist phead)
 {
     return (phead->pnext == NULL) ? true:false;
-}
-bool ListIsEmpty(Plist phead)
-{
-    return (phead->pnext == SIZE) ? true:false;
 }
 ~~~
 #### （四）追加操作

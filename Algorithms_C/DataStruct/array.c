@@ -59,14 +59,14 @@ int main(void)
 
 void InitializeArray(Array *parr)
 {
-    parr->count = 0;
-    parr->length = MAXSIZE;
     parr->pint = (int *)malloc(sizeof(int)*(parr->length));
     if ((parr->pint) == NULL)
     {
         puts("Can\'t locate the memory!");
         exit(EXIT_FAILURE);
     }
+    parr->count = 0;
+    parr->length = MAXSIZE;
 }
 
 bool ArrayIsFull(const Array *parr)
