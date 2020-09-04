@@ -13,8 +13,8 @@ typedef struct node
 
 typedef struct CircularList
 {
-    Pnode front;
     Pnode rear;
+    int length;
 }List, * Plist;
 
 bool InitCircularList(Plist list);
@@ -25,6 +25,7 @@ bool AppendList(Plist list);
 void ShowList(Plist list);
 void ClearList(Plist list);
 static char GetChoice(void);
+static void GetIntNumber(int *data);
 
 int main(void)
 {
@@ -61,18 +62,17 @@ bool InitCircularList(Plist list)
         puts("Can\'t locate memory!");
         return false;
     }
-    list->front = list->rear;
+    list->length == 0;
     list->rear->pnext = list->rear;
 }
 
 bool ListIsEmpty(Plist list)
 {
-    return (list->rear->pnext == list->front)? true:false;
+    return (list->length == 0)? true:false;
 }
 
 bool AppendList(Plist list)
 {
-    
     Pnode newNode = (Pnode)malloc(sizeof(Node));
     if (newNode == NULL)
     {
@@ -94,21 +94,91 @@ bool AppendList(Plist list)
     newNode->pnext = list->rear->pnext;
     list->rear->pnext = newNode;
     list->rear = newNode;
+    list->length = 0;
 
     return false;
 }
 
 bool InsertList(Plist list)
 {
+    Pnode head = list->rear->pnext;
+    int i=0, pos;
+
+    GetIntNumber(&pos);
+    Pnode p = head->pnext;
+
+    while (i<pos-1 && p!=head)
+    {
+        p = p->pnext;
+        i++;
+    }
+    if (i>pos-1 || p==head)
+    {
+        puts("The pos input error!");
+        return false;
+    }
+
     Pnode newNode = (Pnode)malloc(sizeof(Node));
     if (newNode == NULL)
     {
         puts("Can\'t locate the memory!");
         return false;
     }
-    int data, ch;
+    int data;
+    GetIntNumber(&data);
+    
+    newNode->data = data;
+    newNode->pnext = p->pnext;
+    p->pnext = newNode;
+    list->length++;
+
+    return false;
+}
+
+bool DeleteList(Plist list)
+{
+    int pos, i=0;
+    Pnode head = list->rear->pnext;
+    GetIntNumber(&pos);
+    Pnode p = head->pnext;
+    while (i<pos-1 && p!=head)
+    {
+        p = p->pnext;
+        i++;
+    }
+    if (i>pos-1 || p==head)
+    {
+        puts("The error pos!");
+        return false;
+    }
+    int data;
+    Pnode temp = p->pnext;
+    data = temp->data;
+    p->pnext = temp->pnext;
+    free(temp);
+    printf("Delete the %d successfully!", data);
+    list->length--;
+
+    return true;
+}
+
+void ShowList(Plist list)
+{
+    Pnode head = list->rear->pnext;
+    Pnode p = head->pnext;
+    while (p != head)
+    {
+        printf("%d ", p->data);
+        p = p->pnext;
+    }
+    putchar('\n');
+}
+
+static void GetIntNumber(int *data)
+{
+    int ch;
     puts("Enter the data you want to append:");
-    while (scanf("%d", &data) != 1)
+    while (scanf("%d", data) != 1)
     {
         while ((ch = getchar()) != '\n')
         {
@@ -116,11 +186,32 @@ bool InsertList(Plist list)
         }
         puts(" is not a number! try again:");
     }
-    
-    newNode->data = data;
-    newNode->pnext = list->rear->pnext;
-    list->rear->pnext = newNode;
-    list->rear = newNode;
+    EATLINE;
+}
 
-    return false;
+static char getChoice(void)
+{
+    char ch;
+    puts("Enter the choice:");
+    puts("a)Append Item       g)Get Item");
+    puts("i)Insert Item       d)Delete Item");
+    puts("s)Show item         e)Sort Item");
+    puts("q)quit");
+    while ((ch = getchar()) != '\n')
+    {
+        while (getchar() != '\n')
+            continue;
+        if (strchr("agidesq", ch) == NULL)
+        {
+            puts("The error choice you input, try again:");
+        }
+        else
+        {
+            break;
+        }
+    }
+    if (ch == '\n')
+        ch = 'q';
+
+    return ch;
 }
