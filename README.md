@@ -41,10 +41,10 @@ my exercise codes during learn algorithms
 |  8    | 归并排序|[归并排序](./Algorithms_C/Sorts/MergeSort.c)|[MergeSort](./Algorithms_C/Notes/MergeSort.md)|
 
 ### 常见查找算法
-| Index | Description | Code |
-|:-----:|:-----------:|:----:|
-| 1     | 顺序查找    | [顺序查找](./Algorithms_C/Search/SequenceSearch.c)|
-| 2     | 折半查找    | [折半查找](./Algorithms_C/Search/BinarySearch.c)|
-| 3     | 插值查找    | [插值查找](./Algorithms_C/Search/InsertSearch.c)|
-| 4     | 分块查找    | [分块查找](./Algorithms_C/Search/BlockSearch.c)|
-| 5     | 斐波那契查找| [斐波那契查找](./Algorithms_C/Search/FibonacciSearch.c)|
+| Index | Description | Code | Notes  |
+|:-----:|:-----------:|:----:|:-----:|
+| 1     | 顺序查找    | [顺序查找](./Algorithms_C/Search/SequenceSearch.c)|[顺序查找](./Algorithms_C/Notes/Search.md)|
+| 2     | 折半查找    | [折半查找](./Algorithms_C/Search/BinarySearch.c)|[折半查找](./Algorithms_C/Notes/Search.md)|
+| 3     | 插值查找    | [插值查找](./Algorithms_C/Search/InsertSearch.c)|[插值查找](./Algorithms_C/Notes/Search.md)|
+| 4     | 分块查找    | [分块查找](./Algorithms_C/Search/BlockSearch.c)|[分块查找](./Algorithms_C/Notes/Search.md)|
+| 5     | 斐波那契查找| [斐波那契查找](./Algorithms_C/Search/FibonacciSearch.c)|[斐波那契查找](./Algorithms_C/Notes/Search.md)|
