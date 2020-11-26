@@ -15,13 +15,17 @@ public class SingleLink
         Node a4 = new Node("Nancy", 78);
 
         Link students = new Link();
+        System.out.println("--Append--");
         students.append(a1);
         students.append(a2);
         students.append(a3);
         students.append(a4);
         students.show();
-
+        System.out.println("--Delete--");
         students.delete(a2);
+        students.show();
+        System.out.println("--Insert--");
+        students.insert(a3, 1);
         students.show();
     }
 }
@@ -46,11 +50,11 @@ class Node
 
 class Link
 {
+    public int length;
     private Node head = new Node("", 0);
 
     public void append(Node target)
     {
-        
         Node temp = head;
 
         while (temp.next != null)
@@ -58,9 +62,30 @@ class Link
             temp = temp.next;
         }
         temp.next = target;
+        this.length++;
 
         System.out.println("Append successfully");
     } 
+
+    public boolean insert(Node target, int pos)
+    {
+        if (pos<1 || pos>this.length+1)
+        {
+            System.out.println("The pos is wrong!");
+            return false;
+        }
+        Node temp = head;
+        for (int i=0; i<pos-1; i++)
+        {
+            temp = temp.next;
+        }
+        target.next = temp.next;
+        temp.next = target;
+        this.length++;
+
+        System.out.println("Insert successfully!");
+        return true;
+    }
 
     public void delete(Node target)
     {
@@ -76,6 +101,8 @@ class Link
             temp = temp.next;
         }
         temp.next = target.next;
+        this.length--;
+
         System.out.println("Delete successfully!");
     }
 
@@ -86,12 +113,19 @@ class Link
 
     public void show()
     {
-        Node temp = head.next;
+        if (isEmpty())
+        {
+            System.out.println("The link is empty!");
+            return;
+        }
 
-        while (temp != null)
+        Node temp = head.next;
+        int i = 0;
+        while (i < length)
         {
             System.out.println(temp);
             temp = temp.next;
+            i++;
         }
     }
 }
