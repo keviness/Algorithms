@@ -48,3 +48,10 @@ my exercise codes during learn algorithms
 | 3     | 插值查找    | [插值查找](./Algorithms_C/Search/InsertSearch.c)|[插值查找](./Algorithms_C/Notes/Search.md)|
 | 4     | 分块查找    | [分块查找](./Algorithms_C/Search/BlockSearch.c)|[分块查找](./Algorithms_C/Notes/Search.md)|
 | 5     | 斐波那契查找| [斐波那契查找](./Algorithms_C/Search/FibonacciSearch.c)|[斐波那契查找](./Algorithms_C/Notes/Search.md)|
+
+***
+
+## Algorithms by Java
+| Index | Description       | Notes | Codes |
+|:-----:|:-----------------:|:-----:|:-----:|
+|   1   |   Single Link List|  [Single Link List](./Algorithms_Java/SingleLinkList/SingleLinkList.md)| [Single Link List](./Algorithms_Java/SingleLinkList/SingleLink.java)   |
