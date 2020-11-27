@@ -17,7 +17,6 @@ public class Array
 class Node
 {
     private int data;
-
     public Node(int data)
     {
         this.data = data
@@ -34,6 +33,7 @@ class ArrayList
     public int length;
     public int count;
     public Node[] array = new Node[length];
+    
     public ArrayList(int length)
     {
         this.length = length;
