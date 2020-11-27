@@ -54,4 +54,5 @@ my exercise codes during learn algorithms
 ## Algorithms by Java
 | Index | Description       | Notes | Codes |
 |:-----:|:-----------------:|:-----:|:-----:|
-|   1   |   Single Link List|  [Single Link List](./Algorithms_Java/SingleLinkList/SingleLinkList.md)| [Single Link List](./Algorithms_Java/SingleLinkList/SingleLink.java)   |
+|   1   |   Single Link List|  [Single Link List](./Algorithms_Java/SingleLinkList/SingleLinkList.md)| [Single Link List](./Algorithms_Java/DataStruct/SingleLinkList/SingleLink.java)   |
+|   2   |     Array         | [Array](./Algorithms_Java/Array/Array.md) | [Array](./Algorithms_Java/DataStruct/Array/Array.java)|
