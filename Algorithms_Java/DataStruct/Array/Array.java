@@ -10,6 +10,7 @@ public class Array
     public static void main(String[] args)
     {
         ArrayList personList = new ArrayList();
+        
         Node a1 = new Node(12);
         Node a2 = new Node(13);
         Node a3 = new Node(16);
@@ -18,15 +19,61 @@ public class Array
         System.out.println(a1);
         System.out.println(a2);
         System.out.println(personList.length);
-        //(personList.array)[0] = a1;
-        //personList.array[1] = a2;
+        //append
+        System.out.println("--append--");
         personList.append(a1);
         personList.append(a2);
         personList.append(a4);
         personList.show();
+        //insert
+        System.out.println("--insert--");
         personList.insert(2, a3);
         personList.show();
+        //get value
+        int value = personList.get(2);
+        System.out.println("get value:"+value);
+        //modify
+        System.out.println("--midify--");
+        personList.modify(3, 18);
+        personList.show();
+        //delete
+        System.out.println("--delete--");
+        personList.delete(2);
+        personList.show();
     }
+
+    /*
+        char choice;
+        while ((choice=getChoice()) && choice!='E')
+        {
+            switch (choice)
+            {
+                case 'A': personList.append();  break;
+                case 'B': personList.modify();
+            }
+        }
+    */
+    /*
+    public char getChoice()
+    {
+        System.out.println("Enter the choice:");
+        System.out.println("A)Append         B)Modify");
+        System.out.println("C)Insert         D)Show");
+        System.out.println("E)Quit");
+        Scanner in = new Scanner(System.in);
+        char choice = in.nextChar();
+        while (choice<'A' || choice>'E')
+        {
+            System.out.println("The choice is error, try again:");
+            choice = in.nextChar();
+        }
+        if (choice == '\n')
+        {
+            choice = 'E';
+        }
+        return choice;
+    }
+    */
 }
 
 class Node
@@ -68,7 +115,7 @@ class ArrayList
             System.out.println("The array is empty!");
             return -1;
         }
-        return this.array[index].data;
+        return this.array[index-1].data;
     }
 
     public void modify(int index, int value)
@@ -79,6 +126,7 @@ class ArrayList
             return;
         }
         this.array[index].data = value;
+        System.out.printf("%d modified successfully! \n", index);
     }
 
     public void append(Node element)
@@ -114,10 +162,32 @@ class ArrayList
             {
                 this.array[i+1] = this.array[i];
             }
-            this.array[index] = value;
+            this.array[index-1] = value;
             this.count++;
+            System.out.printf("%d inserted successfully! \n", index);
         }
     } 
+
+    public void delete(int index)
+    {
+        if (this.isEmpty())
+        {
+            System.out.println("The array is empty!");
+            return;
+        }
+        if (index<1 || index>this.count)
+        {
+            System.out.println("The index is error!");
+            return;
+        }
+        for (int i=index; i<this.count; i++)
+        {
+            this.array[i-1] = this.array[i];
+        }
+        this.array[this.count-1] = null;
+        this.count--;
+        System.out.printf("%d deleted successfully! \n", index);
+    }
 
     public void show()
     {
