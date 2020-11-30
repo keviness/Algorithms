@@ -26,8 +26,8 @@ public class SingleLink
         students.show();
         System.out.println("--Insert--");
         students.insert(a3, 1);
-        students.insert(a1, 3);
-        students.show();
+        //students.insert(a1, 3);
+        //students.show();
     }
 }
 
@@ -70,6 +70,12 @@ class Link
 
     public boolean insert(Node target, int pos)
     {
+        if (pos<1 || pos>length)
+        {
+            System.out.println("The pos is error!");
+            return false;
+        }
+
         Node temp = head;
         int i = 0;
         while (i<pos-1 && temp.next!= null)
@@ -77,7 +83,7 @@ class Link
             temp = temp.next;
             i++;
         }
-        if (i>pos-1 && temp==null)
+        if (i>pos-1 && temp.next==null)
         {
             System.out.println("The pos is wrong!");
             return false;
@@ -119,11 +125,11 @@ class Link
     {
         if (isEmpty())
         {
-            System.out.println("The link is empty!");
+            System.out.println("The link list is empty!");
             return;
         }
         Node temp = head.next;
-        for (int i=0; i<this.length; i++)
+        while (temp != null)
         {
             System.out.println(temp);
             temp = temp.next;

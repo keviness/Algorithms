@@ -142,7 +142,7 @@ class ArrayList
 
     public void insert(int index, Node value)
     {
-        if (this.isEmpty())
+        if (this.isEmpty() || index==1)
         {
             this.array[0] = value;
         }
