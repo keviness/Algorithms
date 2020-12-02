@@ -49,6 +49,7 @@ class Stack
     public Node[] stack;
     public int top;
     public int length;
+
     public Stack(int length)
     {
         stack = new Node[length];
@@ -68,7 +69,7 @@ class Stack
 
     public Node get(int index)
     {
-        if (index<1 || index>this.length)
+        if (index<1 || index>this.top)
         {
             System.out.println("The index error!");
             return null;
