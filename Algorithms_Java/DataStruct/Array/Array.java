@@ -95,9 +95,10 @@ class ArrayList
 {
     public int length = 5;
     public int count;
-    
-    public Node[] array = new Node[this.length];
-    
+    public ArrayList()
+    {
+        public Node[] array = new Node[this.length];
+    }
     public boolean isEmpty()
     {
         return this.count == 0? true:false;
