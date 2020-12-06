@@ -52,7 +52,13 @@ class Node
 class Link
 {
     public int length;
-    private Node head = new Node("", 0);
+    private Node head;
+
+    public Link()
+    {
+        this.length = 0;
+        head = new Node("", 0);
+    }
 
     public void append(Node target)
     {
