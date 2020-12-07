@@ -29,6 +29,7 @@ class Node
 {
     private int data;
     private String name;
+    
     public Node(String name, int data)
     {
         this.name = name;
