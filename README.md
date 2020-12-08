@@ -52,6 +52,7 @@ my exercise codes during learn algorithms
 ***
 
 ## Algorithms by Java
+### Data Struct
 | Index | Description       | Notes | Codes |
 |:-----:|:-----------------:|:-----:|:-----:|
 |   1   |   Single Link List|  [Single Link List](./Algorithms_Java/Notes/SingleLink.md)| [Single Link List](./Algorithms_Java/DataStruct/SingleLinkList/SingleLink.java)   |
@@ -59,3 +60,9 @@ my exercise codes during learn algorithms
 |   3   |     Stack-Link      | [Stack-Link](./Algorithms_Java/Notes/stackLink.md) | [Stack-Link](./Algorithms_Java/Stack/stackLink.java) |
 |   4   |     Stack-Sequence      | [Stack-Sequence](./Algorithms_Java/Notes/stackSequence.md) | [Stack-Link](./Algorithms_Java/Stack/stackSequence.java) |
 |   5   |     Queue-Link     |   [Queue-Link](./Algorithms_Java/Notes/QueueLink.md) | [Queue-Link](./Algorithms_Java/Queue/QueueLink.md) |
+|   6   |    Queue-Sequence  | [Queue-Sequence](./Algorithms_Java/Notes/QueueSequence.md) | [Queue-Sequence](./Algorithms_Java/Notes/QueueSequence.java)|
+
+### Sort
+| Index | Description | Notes | Code |
+|:-----:|:-----------:|:-----:|:----:|
+|   1   |  Insertion Sort(1):StraightSort|[Straight Sort]()|[Straight Sort]()|
