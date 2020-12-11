@@ -57,12 +57,16 @@ my exercise codes during learn algorithms
 |:-----:|:-----------------:|:-----:|:-----:|
 |   1   |   Single Link List|  [Single Link List](./Algorithms_Java/Notes/SingleLink.md)| [Single Link List](./Algorithms_Java/DataStruct/SingleLinkList/SingleLink.java)   |
 |   2   |     Array list        | [Array](./Algorithms_Java/Notes/Array.md) | [Array](./Algorithms_Java/DataStruct/Array/Array.java)|
-|   3   |     Stack-Link      | [Stack-Link](./Algorithms_Java/Notes/stackLink.md) | [Stack-Link](./Algorithms_Java/Stack/stackLink.java) |
-|   4   |     Stack-Sequence      | [Stack-Sequence](./Algorithms_Java/Notes/stackSequence.md) | [Stack-Link](./Algorithms_Java/Stack/stackSequence.java) |
-|   5   |     Queue-Link     |   [Queue-Link](./Algorithms_Java/Notes/QueueLink.md) | [Queue-Link](./Algorithms_Java/Queue/QueueLink.md) |
-|   6   |    Queue-Sequence  | [Queue-Sequence](./Algorithms_Java/Notes/QueueSequence.md) | [Queue-Sequence](./Algorithms_Java/Notes/QueueSequence.java)|
+|   3   |     Stack-Link      | [Stack-Link](./Algorithms_Java/Notes/stackLink.md) | [Stack-Link](./Algorithms_Java/DataStruct/Stack/stackLink.java) |
+|   4   |     Stack-Sequence      | [Stack-Sequence](./Algorithms_Java/Notes/stackSequence.md) | [Stack-Link](./Algorithms_Java/DataStruct/Stack/stackSequence.java) |
+|   5   |     Queue-Link     |   [Queue-Link](./Algorithms_Java/Notes/QueueLink.md) | [Queue-Link](./Algorithms_Java/DataStruct/Queue/QueueLink.java) |
+|   6   |    Queue-Sequence  | [Queue-Sequence](./Algorithms_Java/Notes/QueueSequence.md) | [Queue-Sequence](./Algorithms_Java/DataStruct/Queue/QueueSequence.java)|
 
 ### Sort
 | Index | Description | Notes | Code |
 |:-----:|:-----------:|:-----:|:----:|
-|   1   |  Insertion Sort(1):StraightSort|[Straight Sort]()|[Straight Sort]()|
+|   1   |  Insertion Sort(1):Straight Insertion Sort|[Straight Sort](./Algorithms_Java/Notes/StraightSort.md)|[Straight Sort](./Algorithms_Java/Sort/StraightSort/StraightSort.java)|
+|   2   |   Insertion Sort(2):Binary Sort | [Binary Sort](./Algorithms_Java/Notes/BinarySort.md) | [Binary Sort](./Algorithms_Java/Sort/BinarySort/BinarySort.java) |
+|   3   |   Insertion Sort(3):Shell Sort | [Shell Sort](./Algorithms_Java/Notes/ShellSort.md) | [Shell Sort](./Algorithms_Java/Sort/ShellSort/ShellSort.java) |
+|   4   |   Swap Sort(1):Bubble Sort | [Bubble Sort](./Algorithms_Java/Notes/BubbleSort.md) | [bubble Sort](./Algorithms_Java/Sort/BubbleSort/BubbleSort.java) |
+|   5   |  Swap Sort(2):Quick Sort   | [Quick Sort](./Algorithms_Java/Notes/QuickSort.md)  | [Quick Sort](./Algorithms_Java/Sort/QuickSort/QuickSort.java) |
