@@ -68,5 +68,6 @@ my exercise codes during learn algorithms
 |   1   |  Insertion Sort(1):Straight Insertion Sort|[Straight Sort](./Algorithms_Java/Notes/StraightSort.md)|[Straight Sort](./Algorithms_Java/Sort/StraightSort/StraightSort.java)|
 |   2   |   Insertion Sort(2):Binary Sort | [Binary Sort](./Algorithms_Java/Notes/BinarySort.md) | [Binary Sort](./Algorithms_Java/Sort/BinarySort/BinarySort.java) |
 |   3   |   Insertion Sort(3):Shell Sort | [Shell Sort](./Algorithms_Java/Notes/ShellSort.md) | [Shell Sort](./Algorithms_Java/Sort/ShellSort/ShellSort.java) |
-|   4   |   Swap Sort(1):Bubble Sort | [Bubble Sort](./Algorithms_Java/Notes/BubbleSort.md) | [bubble Sort](./Algorithms_Java/Sort/BubbleSort/BubbleSort.java) |
+|   4   |   Swap Sort(1):Bubble Sort | [Bubble Sort](./Algorithms_Java/Notes/BubbleSort.md) | [Bubble Sort](./Algorithms_Java/Sort/BubbleSort/BubbleSort.java) |
 |   5   |  Swap Sort(2):Quick Sort   | [Quick Sort](./Algorithms_Java/Notes/QuickSort.md)  | [Quick Sort](./Algorithms_Java/Sort/QuickSort/QuickSort.java) |
+|   6   |Selection Sort(1):Simple Selected Sort| [Simple Selected Sort](./Algorithms_Java/Notes/SimpleSelectedSort.md)| [Simple Selected Sort](./Algorithms_Java/Sort/SimpleSelectedSort/SimpleSelectedSort.java) |
