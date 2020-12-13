@@ -1,11 +1,11 @@
 /**Data Struct: Array
-*@author keviness
-*@version 2020/11/27
+* @author keviness
+* @version 2020/11/27
 */
 
 import java.util.*;
 
-public class Array
+public class array
 {
     public static void main(String[] args)
     {
