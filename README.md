@@ -63,11 +63,20 @@ my exercise codes during learn algorithms
 |   6   |    Queue-Sequence  | [Queue-Sequence](./Algorithms_Java/Notes/QueueSequence.md) | [Queue-Sequence](./Algorithms_Java/DataStruct/Queue/QueueSequence.java)|
 
 ### Sort
-| Index | Description | Notes | Code |
+| Index | Description |  Codes  |
 |:-----:|:-----------:|:-----:|:----:|
-|   1   |  Insertion Sort(1):Straight Insertion Sort|[Straight Sort](./Algorithms_Java/Notes/StraightSort.md)|[Straight Sort](./Algorithms_Java/Sort/StraightSort/StraightSort.java)|
-|   2   |   Insertion Sort(2):Binary Sort | [Binary Sort](./Algorithms_Java/Notes/BinarySort.md) | [Binary Sort](./Algorithms_Java/Sort/BinarySort/BinarySort.java) |
-|   3   |   Insertion Sort(3):Shell Sort | [Shell Sort](./Algorithms_Java/Notes/ShellSort.md) | [Shell Sort](./Algorithms_Java/Sort/ShellSort/ShellSort.java) |
-|   4   |   Swap Sort(1):Bubble Sort | [Bubble Sort](./Algorithms_Java/Notes/BubbleSort.md) | [Bubble Sort](./Algorithms_Java/Sort/BubbleSort/BubbleSort.java) |
-|   5   |  Swap Sort(2):Quick Sort   | [Quick Sort](./Algorithms_Java/Notes/QuickSort.md)  | [Quick Sort](./Algorithms_Java/Sort/QuickSort/QuickSort.java) |
-|   6   |Selection Sort(1):Simple Selected Sort| [Simple Selected Sort](./Algorithms_Java/Notes/SimpleSelectedSort.md)| [Simple Selected Sort](./Algorithms_Java/Sort/SimpleSelectedSort/SimpleSelectedSort.java) |
+|   1   |  Insertion Sort(1):Straight Insertion Sort|[Straight Sort](./Algorithms_Java/Sort/StraightSort/StraightSort.java)|
+|   2   |   Insertion Sort(2):Binary Sort | [Binary Sort](./Algorithms_Java/Sort/BinarySort/BinarySort.java) |
+|   3   |   Insertion Sort(3):Shell Sort |  [Shell Sort](./Algorithms_Java/Sort/ShellSort/ShellSort.java) |
+|   4   |   Swap Sort(1):Bubble Sort |  [Bubble Sort](./Algorithms_Java/Sort/BubbleSort/BubbleSort.java) |
+|   5   |  Swap Sort(2):Quick Sort   |  [Quick Sort](./Algorithms_Java/Sort/QuickSort/QuickSort.java) |
+|   6   |Selection Sort(1):Simple Selected Sort| [Simple Selected Sort](./Algorithms_Java/Sort/SimpleSelectedSort/SimpleSelectedSort.java) |
+|   7   |Selection SOrt(2):Heap Sort | [Heap Sort](./Algorithms_Java/Sort/HeapSort/HeapSort.java) |
+
+### Search
+| Index |  Description |  Codes  |
+|:-----:|:------------:|:-------:|
+|   1   |   Binary Search |   [Binary Search](./Algorithms_Java/Sort/BinarySearch/BinarySearch.java) |  
+|   2   |   Insert Search |  [Insert Search](./Algorithms_Java/Sort/InsertSearch/InsertSearch.java) |
+|   3   |  Sequence Search| [Sequence Search](./Algorithms_Java/Sort/SequenceSearch/SequenceSearch.java) |
+|   4   |  Fibonacci Search| [Fibonacci Search](./Algorithms_Java/Sort/FibonacciSearch/FibonacciSearch.java) |
