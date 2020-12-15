@@ -80,3 +80,4 @@ my exercise codes during learn algorithms
 |   2   |   Insert Search |  [Insert Search](./Algorithms_Java/Sort/InsertSearch/InsertSearch.java) |
 |   3   |  Sequence Search| [Sequence Search](./Algorithms_Java/Sort/SequenceSearch/SequenceSearch.java) |
 |   4   |  Fibonacci Search| [Fibonacci Search](./Algorithms_Java/Sort/FibonacciSearch/FibonacciSearch.java) |
+|   5   |  Block Search    | [Block Search](./Algorithms_Java/Sort/BlockSearch/BlockSearch.java) |
