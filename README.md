@@ -64,7 +64,7 @@ my exercise codes during learn algorithms
 
 ### Sort
 | Index | Description |  Codes  |
-|:-----:|:-----------:|:-----:|:----:|
+|:-----:|:-----------:|:----:|
 |   1   |  Insertion Sort(1):Straight Insertion Sort|[Straight Sort](./Algorithms_Java/Sort/StraightSort/StraightSort.java)|
 |   2   |   Insertion Sort(2):Binary Sort | [Binary Sort](./Algorithms_Java/Sort/BinarySort/BinarySort.java) |
 |   3   |   Insertion Sort(3):Shell Sort |  [Shell Sort](./Algorithms_Java/Sort/ShellSort/ShellSort.java) |
