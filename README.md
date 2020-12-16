@@ -56,9 +56,9 @@ my exercise codes during learn algorithms
 | Index | Description       | Notes | Codes |
 |:-----:|:-----------------:|:-----:|:-----:|
 |   1   |   Single Link List|  [Single Link List](./Algorithms_Java/Notes/SingleLink.md)| [Single Link List](./Algorithms_Java/DataStruct/SingleLinkList/SingleLink.java)   |
-|   2   |     Array list        | [Array](./Algorithms_Java/Notes/Array.md) | [Array](./Algorithms_Java/DataStruct/Array/Array.java)|
+|   2   |     Array         | [Array](./Algorithms_Java/Notes/Array.md) | [Array](./Algorithms_Java/DataStruct/Array/Array.java)|
 |   3   |     Stack-Link      | [Stack-Link](./Algorithms_Java/Notes/stackLink.md) | [Stack-Link](./Algorithms_Java/DataStruct/Stack/stackLink.java) |
-|   4   |     Stack-Sequence      | [Stack-Sequence](./Algorithms_Java/Notes/stackSequence.md) | [Stack-Link](./Algorithms_Java/DataStruct/Stack/stackSequence.java) |
+|   4   |     Stack-Sequence      | [Stack-Sequence](./Algorithms_Java/Notes/stackSequence.md) | [Stack-Sequence](./Algorithms_Java/DataStruct/Stack/stackSequence.java) |
 |   5   |     Queue-Link     |   [Queue-Link](./Algorithms_Java/Notes/QueueLink.md) | [Queue-Link](./Algorithms_Java/DataStruct/Queue/QueueLink.java) |
 |   6   |    Queue-Sequence  | [Queue-Sequence](./Algorithms_Java/Notes/QueueSequence.md) | [Queue-Sequence](./Algorithms_Java/DataStruct/Queue/QueueSequence.java)|
 
